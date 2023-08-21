@@ -85,15 +85,21 @@
 
   </div>
 
-  <div id="Aws" class="tabcontent">
+  <<div id="Aws" class="tabcontent">
     <div class="main-content">
         <div class="heading">
               <h1>AWS Services</h1>
-              <!-- Main content area goes here -->
+        </div>
+        <div class="linkGroup" >
+          <ul>
+            <li>Launch EC2 Instance&nbsp;<a href="#">Launch ></a></li>
+            <li>List All Instances&nbsp;<a href="#">List ></a></li>
+            <li>Create S3 bucket&nbsp;<a href="#">Create ></a></li>
+            <li>Launch EC2 Instance&nbsp;<a href="#">Launch ></a></li>
+          </ul>
         </div>
         
     </div>
-
   </div>
 
   <div id="Linux" class="tabcontent">
@@ -103,12 +109,12 @@
               <h1>Linux</h1>
         </div>
         <div class="CommandInputBox">
-          <input id="command_name" type="text" placeholder="suru@kali.org/~" value="" required/>
+          <input type="text" placeholder="suru@kali.org/~" />&nbsp;<button type="submit">Run</button> 
         </div>
-        <div class="OutputBox">
+        <div class="output">
           <center>
             <br>
-            <b>Output will be displayed here ... <b><br>
+            <b>Output will be displayed here:<b><br>
             <pre><p id="output_id"> </p></pre>
           </center>
         </div>
@@ -154,3 +160,4 @@
     </script>
   </body>
 </html>
+
