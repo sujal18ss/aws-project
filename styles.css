@@ -1,0 +1,69 @@
+* {box-sizing: border-box;
+padding: 0;
+margin: 0;}
+
+/* Style the tab */
+.tab {
+margin-top: 15vh;
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 20%;
+  height: 85vh;
+  z-index: -1;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+	background-color: #f1f1f1;
+margin-top: 15vh;
+  float: right;
+  border: 1px solid #ccc;
+  width: 80%;
+  border-left: none;
+  height: 85vh;
+  
+}
+
+
+
+.HomeContainer{
+	display: flex;
+	flex-direction: Column;
+	justify-content: center;
+	align-items: center;
+	background-color: #f1f1f1;
+margin-top: 15vh;
+  float: left;
+  border: 1px solid #ccc;
+  width: 80%;
+  border-left: none;
+  height: 85vh;
+}

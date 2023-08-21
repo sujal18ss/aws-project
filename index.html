@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="header">
+            <!-- header area goes here -->
+            <h1 style="font-size: 2.3rem;">Cloud Burst</h1>
+			<h5 style="font-size: 1rem;">"An Integrated Environment for DOCKER, AWS and Linux"</h5>
+			<h6>( Created by Sujal Sahu & Team )</h6>
+        </div>
+		
+ 
+	<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openProg(event, 'Docker')"><img src="docker.svg" height="30px" width="30px"/>&nbsp;Docker</button>
+  <button class="tablinks" onclick="openProg(event, 'Aws')"><img src="aws.svg" height="30px" width="30px"/>&nbsp;AWS</button>
+  <button class="tablinks" onclick="openProg(event, 'Linux')"><img src="linux.svg" height="30px" width="30px"/>&nbsp;Linux</button>
+</div>
+
+<div class="tabcontent">
+	<p>Unlocking seamless integration. Exploring the Power of AWS, Docker and Linux in #Unified Enviorment.</p>
+</div>
+
+<!-- Tab content -->
+<div id="Docker" class="tabcontent">
+  
+<div class="main-content" style="background-image: docker.png;">
+            <!-- Main content area goes here -->
+			<div class="heading">
+            <h1>Docker GUI</h1>
+			</div>
+			<h3 style="font-size: 1.5rem; margin-top: 20px;">Welcome to Docker GUI</h3></br>
+            <p>Here you can easily create/delete docker containers.</p></br>
+			<div class="btnBox">
+			<button onclick="document.getElementById('id01').style.display='block'" class="launchBtn" style="width:auto;">Launch</button>
+			<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="cancelbtn" id="delBtn">Delete</button>
+			</div>
+			<div class="BoxDocker">OutPut</div>
+  
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="#" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="docker.svg" alt="Avatar" class="avatar">
+	  <h3>Docker GUI</h3>
+    </div>
+
+    <div class="container-form">
+      <label for="container"><b>Container Name</b></label>
+      <input type="text" placeholder="Enter Container" name="container" required>
+
+      <label for="image"><b>Image Name</b></label>
+      <input type="text" placeholder="Enter Image" name="image" required>
+        
+      <button class="launchBtn" type="submit">Launch</button>
+
+    </div>
+
+  </form>
+</div>
+
+<div id="id02" class="modal">
+  <form class="modal-content animate" action="#" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="docker.svg" alt="Avatar" class="avatar">
+	  <h3>Docker GUI</h3>
+    </div>
+
+    <div class="container-form">
+      <label for="container"><b>Container Name</b></label>
+      <input type="text" placeholder="Enter Container" name="container" required>
+
+      <label for="image"><b>Image Name</b></label>
+      <input type="text" placeholder="Enter Image" name="image" required>
+        
+      <button type="submit" class="cancelbtn">Delete</button>
+
+    </div>
+  </form>
+</div>
+
+
+</div>
+		
+</div>
+
+
+</div>
+
+<div id="Aws" class="tabcontent">
+	<div class="main-content">
+			<div class="heading">
+            <h1>AWS Services</h1>
+            <!-- Main content area goes here -->
+			</div>
+			
+	</div>
+
+</div>
+
+<div id="Linux" class="tabcontent">
+  <div class="main-content">
+            <!-- Main content area goes here -->
+			<div class="heading">
+            <h1>Linux</h1>
+			</div>
+			<div class="CommandInputBox">
+				<input type="text" placeholder="suru@kali.org/~" />
+			</div>
+			<div class="OutputBox"></div>
+			
+	</div>
+</div>
+
+<script>
+//Get the modal
+var modal = document.getElementById('id01');
+var modal = document.getElementById('id02');
+
+
+//When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<script>
+function openProg(evt, progName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(progName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
