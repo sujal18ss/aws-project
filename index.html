@@ -2,11 +2,13 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <script src="backend.js"></script>
       <link rel="stylesheet" type="text/css" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="backend.js"></script>
   </head>
   <body>
+          <script src="backend.js"></script>
     <div class="header">
         <!-- header area goes here -->
         <h1 style="font-size: 2.3rem;">Cloud Burst</h1>
@@ -41,14 +43,23 @@
             <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="cancelbtn" id="delBtn">Delete</button>
           </div>
           
-          <div class="BoxDocker">OutPut</div>
+        <div class="BoxDocker">
+            <center>
+              <br>
+              <b>Output will be displayed here:<b><br>
+              <pre><p id="output_id"> </p></pre>
+            </center>
+       </div>
+
+       <!--   <div class="BoxDocker">OutPut</div> -->
     
           <div id="id01" class="modal">
             <form class="modal-content animate" action="#" method="post">
               <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <img src="docker.svg" alt="Avatar" class="avatar">
-                <h3>Docker GUI</h3>
+
+          <h3>Docker GUI</h3>
               </div>
 
               <div class="container-form">
@@ -108,14 +119,16 @@
         <div class="heading">
               <h1>Linux</h1>
         </div>
+
         <div class="CommandInputBox">
-          <input type="text" placeholder="suru@kali.org/~" />&nbsp;<button type="submit">Run</button> 
+          <input id="command_name" type="text" placeholder="suru@kali.org/~" value="" required/>&nbsp;
+          <button type="submit" onclick="run();">Run</button> 
         </div>
         <div class="output">
           <center>
             <br>
             <b>Output will be displayed here:<b><br>
-            <pre><p id="output_id"> </p></pre>
+            <pre><p id="output_id1"> </p></pre>
           </center>
         </div>
         
@@ -160,4 +173,3 @@
     </script>
   </body>
 </html>
-
