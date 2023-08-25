@@ -1,0 +1,21 @@
+import json
+import boto3
+
+# Create S3 bucket
+myBucket = boto3.client('s3')
+
+def lambda_handler(event, context):
+    myBucket.create_bucket(
+        Bucket='lw-cloud-burst-23',
+        ACL='private',
+        CreateBucketConfiguration={
+            'LocationConstraint': 'ap-south-1'} 
+    )
+    # print(event)
+    # # cip = event.['Records'][0]['awsRegion']
+    # # print("Output : ",cip)
+    
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda , Your S3 bucket is created https://s3.console.aws.amazon.com/s3/home?region=ap-south-1 !')
+    }
